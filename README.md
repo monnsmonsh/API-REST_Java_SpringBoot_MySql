@@ -1,12 +1,14 @@
 
 # COMO CREAR UNA API REST SPRING BOOT
 
-configuracion basica
+
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
+Como primer pasaro para desarrollar nuestra api congiguramos nuestro spring
+https://github.com/monnsmonsh/JAVA/blob/main/Config_Spring.png
 
 ## Roadmap
 
