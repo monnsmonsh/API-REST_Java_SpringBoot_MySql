@@ -7,7 +7,10 @@
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
-Como primer pasaro para desarrollar nuestra api congiguramos nuestro `spring`
+## 🛠 Skills
+Java, sprintboot, mysql
+
+Para poder crear una api en java con sprint, lo primero que necesitamos es congigurar nuestro `spring` como en la siguiente imagen se muestra
 <image src="https://github.com/monnsmonsh/JAVA/blob/main/Config_Spring.png" alt="Descripción de la imagen">
 
 ## Roadmap
@@ -28,8 +31,7 @@ Como primer pasaro para desarrollar nuestra api congiguramos nuestro `spring`
 ```
 
 
-## 🛠 Skills
-Java, sprintboot, mysql
+
 
 
 ## Configuracion de package
