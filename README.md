@@ -27,7 +27,7 @@ configuracion basica
 
 
 ## 🛠 Skills
-Javascript, HTML, CSS...
+Java, sprintboot, mysql
 
 
 ## Configuracion de package
@@ -38,12 +38,42 @@ creamos los siguientes `package` para nuestro proyecto
   - repositories
 
 Despues de configurados los repocitorios agregamos a:
-| package | class     | nombre                |
+| package | TYPE     | nombre                |
 | :-------- | :------- | :------------------------- |
 | controller | clase | UserController |
 | models | clase | UserModel |
 | repositories | interface | IUserService |
 | services | clase | UserService |
+
+### Configurar nuestro modelo
+ 
+ Primero creamos definimos nuestro modelo
+ ```java
+    package com.api.crud.models;
+
+    import jakarta.persistence.*;
+
+    @Entity
+    @Table(name ="user")
+    public class UserModel {
+
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Long id;
+
+        private String fistName;
+        private String lastName;
+        private String email;
+
+    }
+
+```
+
+Luego de tener nuestro medelo listo les generamos los getter y setters
+
+
+
+
 
 ## API Reference
 
@@ -70,4 +100,5 @@ Despues de configurados los repocitorios agregamos a:
 #### add(num1, num2)
 
 Takes two numbers and returns the sum.
+
 
