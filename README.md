@@ -71,6 +71,141 @@ Despues de configurados los repocitorios agregamos a:
 
 Luego de tener nuestro medelo listo les generamos los getter y setters
 
+### Configurar nuestro controller
+para empezar a configurar nuestro controlador tenemos que ponerle a anotacion `@RestController`, `@RequestMapping`.
+
+una ves terminada definimos la peticiones HTTP y las rutas
+ ```java
+package com.api.crud.controllers;
+
+
+import com.api.crud.models.UserModel;
+import com.api.crud.services.UserService;
+import org.apache.catalina.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.Optional;
+
+@RestController
+@RequestMapping("/user")
+public class UserController {
+
+    @Autowired
+    private UserService userService;
+
+
+    @GetMapping
+    public ArrayList<UserModel> getUsers(){
+        return this.userService.getUsers();
+    }
+
+    @PostMapping
+    public UserModel saveUser(@RequestBody UserModel user){
+        return this.userService.saveUser(user);
+    }
+
+    @GetMapping(path = "/{id}")
+    public Optional <UserModel> getUserById(@PathVariable("id") Long id){
+        return this.userService.getById(id);
+    }
+
+    @PutMapping(path = "/{id}")
+    public UserModel updateUserById(@RequestBody UserModel request,@PathVariable("id") Long id){
+        return  this.userService.updateById(request, id);
+    }
+
+    @DeleteMapping(path = "/{id}")
+    public String deleteById(@PathVariable("id") Long id){
+        boolean ok= this.userService.deleteUser(id);
+        if(ok) {
+            return "Usuario eliminado con el id"+id+"eliminado";
+        }else{
+            return  "Usuario no eliminado ubo un eeror";
+        }
+
+    }
+
+}
+
+
+```
+
+
+### Configurar nuestro repositorio
+primero indicamos que es un repocitorio con la anotacion  `@Repository`
+
+
+### Configurar nuestro Service
+
+le aggregamos la anotacion de `@Service`.
+
+los primero que tenemos que agrefar es @autowire que esto srive para inmyeccion de dependencias y la que susamos es IUserRepository.
+
+para obtner nuestros usuario generamos el siguiente metodo
+ ```java
+public ArrayList<UserModel> getUsers(){
+        return  (ArrayList<UserModel>) userRepository.findAll();
+    }
+```
+
+
+ ```java
+package com.api.crud.services;
+
+
+import com.api.crud.models.UserModel;
+import com.api.crud.repositories.IUserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import java.util.ArrayList;
+import java.util.Optional;
+
+@Service
+public class UserService {
+    @Autowired
+    IUserRepository userRepository;
+
+
+    //Metodo para listar por medio de un arra
+    public ArrayList<UserModel> getUsers(){
+        return  (ArrayList<UserModel>) userRepository.findAll();
+    }
+
+    public UserModel saveUser(UserModel user){
+        return userRepository.save(user);
+    }
+
+    public Optional<UserModel> getById(Long id){
+        return userRepository.findById(id);
+    }
+
+    public UserModel updateById(UserModel request, Long id){
+        UserModel user = userRepository.findById(id).get();
+
+        user.setFistName(request.getFistName());
+        user.setLastName(request.getLastName());
+        user.setEmail(request.getEmail());
+
+        return user;
+    }
+
+    public Boolean deleteUser (Long id){
+        try{
+            userRepository.deleteById(id);
+            return true;
+        }catch(Exception e){
+            return false;
+        }
+    }
+
+
+
+}
 
 
 
@@ -90,15 +225,6 @@ Luego de tener nuestro medelo listo les generamos los getter y setters
 #### Get item
 
 ```http
-  GET /api/items/${id}
+    GET /user/${id}
+    GET /user/${id}
 ```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
-
-#### add(num1, num2)
-
-Takes two numbers and returns the sum.
-
-
