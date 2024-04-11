@@ -1,5 +1,5 @@
 
-# COMO CREAR UNA API REST SPRING BOOT
+# COMO CREAR UNA API REST EN JAVA CON SPRING BOOT
 
 
 
@@ -10,18 +10,18 @@
 ## 🛠 Skills
 Java, sprintboot, mysql
 
-Para poder crear una api en java con sprint, lo primero que necesitamos es congigurar nuestro `spring` como en la siguiente imagen se muestra
+Para poder crear una api en java con sprint, lo primero que necesitamos es configurar nuestro `spring` como en la siguiente imagen se muestra
 <image src="https://github.com/monnsmonsh/JAVA/blob/main/Config_Spring.png" alt="Descripción de la imagen">
 
-## Roadmap
+## Software utilizado
+- IntelliJ IDEA 
+- workbench
 
-- Additional browser support
-
-- Add more integrations
+No es necesario utilizar `IntelliJ IDEA ` puedes utilizar cualquier otro IDE que soporte java.
 
 
-## Usage/Examples
-
+## Configuracion con la Base de datos
+Para poder conectarnos a nuestra base de datos tenemos que configurar la conexion 
 ```properties
     spring.datasource.url=jdbc:mysql://localhost:3306/nombre_de_la_base_de_datos
     spring.datasource.username=root
