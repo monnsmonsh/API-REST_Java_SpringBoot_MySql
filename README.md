@@ -29,9 +29,11 @@ Para poder conectarnos a nuestra base de datos tenemos que configurar la conexio
     spring.datasource.username=root
     spring.datasource.password=********
     spring.jpa.hibernate.ddl-auto=update
-
 ```
-
+Si contamos con varios proyecto podemos agragar la ruta de nuestro servidor
+```properties
+   server.port=4000
+```
 
 
 
