@@ -12,7 +12,7 @@ Java, sprintboot, mysql
 
 Para poder crear una api en java con sprint, lo primero que necesitamos es configurar nuestro `spring` como en la siguiente imagen se muestra.
 
-<image src="https://github.com/monnsmonsh/JAVA/blob/main/Config_Spring.png" alt="Descripción de la imagen">
+<image src="https://github.com/monnsmonsh/JAVA/blob/main/Assets/Config_Spring.png" alt="Descripción de la imagen">
 
 ## Software utilizado
 - IntelliJ IDEA 
@@ -217,20 +217,19 @@ public class UserService {
 
 
 ## API Reference
-
-#### Get all items
-
-```http
-  GET /api/items
-```
-
-| Parameter | Type     | Description                |
+| Metodo | Type     | URL                |
 | :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
+| `GET` | `Listado` | localhost:4000/user |
+| `GET` | `Detallas` | localhost:4000/user/{id} |
+| `Post` | `Crear` | localhost:4000/user |
+| `DELETE` | `Eliminar` | localhost:4000/user/{id} |
 
-#### Get item
-
-```http
-    GET /user/${id}
-    GET /user/${id}
-```
+### GET
+<image src="https://github.com/monnsmonsh/JAVA/blob/main/Assets/GET_All.png" alt="Descripción de la imagen">
+<image src="https://github.com/monnsmonsh/JAVA/blob/main/Assets/GET_Id.png" alt="Descripción de la imagen">
+    
+### POST
+<image src="https://github.com/monnsmonsh/JAVA/blob/main/Assets/POST.png" alt="Descripción de la imagen">
+    
+### DELETE
+<image src="https://github.com/monnsmonsh/JAVA/blob/main/Assets/DELETE.png" alt="Descripción de la imagen">
