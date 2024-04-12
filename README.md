@@ -221,12 +221,16 @@ public class UserService {
 | :-------- | :------- | :------------------------- |
 | `GET` | `Listado` | localhost:4000/user |
 | `GET` | `Detallas` | localhost:4000/user/{id} |
+| `PUT` | `Editar` | localhost:4000/user/{id} |
 | `Post` | `Crear` | localhost:4000/user |
 | `DELETE` | `Eliminar` | localhost:4000/user/{id} |
 
 ### GET
 <image src="https://github.com/monnsmonsh/JAVA/blob/main/Assets/GET_All.png" alt="Descripción de la imagen">
-<image src="https://github.com/monnsmonsh/JAVA/blob/main/Assets/GET_Id.png" alt="Descripción de la imagen">
+<image src="https://github.com/monnsmonsh/JAVA/blob/main/Assets/GET_ID.png" alt="Descripción de la imagen">
+
+### PUT
+<image src="https://github.com/monnsmonsh/JAVA/blob/main/Assets/PUT.png" alt="Descripción de la imagen">
     
 ### POST
 <image src="https://github.com/monnsmonsh/JAVA/blob/main/Assets/POST.png" alt="Descripción de la imagen">
