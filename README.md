@@ -17,6 +17,7 @@ Para poder crear una api en java con sprint, lo primero que necesitamos es confi
 ## Software utilizado
 - IntelliJ IDEA 
 - workbench
+- Postman
 
 No es necesario utilizar `IntelliJ IDEA` puedes utilizar cualquier otro IDE que soporte java.
 
