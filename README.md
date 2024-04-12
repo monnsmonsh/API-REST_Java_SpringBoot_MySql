@@ -41,7 +41,8 @@ Si contamos con varios proyecto podemos agragar la ruta de nuestro servidor
    server.port=4000
 ```
 
-> **Note:** Recuerda ques es **Importante** ya tener tu base de datos creada para poder realizar la conexion
+> **Note:** Recuerda ques es **Importante** ya tener tu base de datos creada para poder realizar la conexion, si no es asi recuarda crearla en tu gestor de bd de mysql preferido
+
 ```sql
    create database nombre_de_la_base_de_datos
 ```
