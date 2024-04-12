@@ -41,8 +41,10 @@ Si contamos con varios proyecto podemos agragar la ruta de nuestro servidor
    server.port=4000
 ```
 
-
-
+> **Note:** Recuerda ques es **Importante** ya tener tu base de datos creada para poder realizar la conexion
+```sql
+   create database nombre_de_la_base_de_datos
+```
 
 ## Configuracion de package
 creamos los siguientes `package` para nuestro proyecto
